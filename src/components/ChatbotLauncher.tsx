@@ -41,7 +41,7 @@ export default function ChatbotLauncher() {
             height: 520,
             borderRadius: 16,
             overflow: 'hidden',
-            background: '#0b0f14',
+            background: 'transparent',
             boxShadow: '0 20px 40px rgba(0,0,0,0.5)',
             zIndex: 1000,
             border: '1px solid rgba(255,255,255,0.1)',
