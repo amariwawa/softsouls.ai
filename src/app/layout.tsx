@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
-import ZapierChatbot from "@/components/ZapierChatbot";
+import ChatbotLauncher from "@/components/ChatbotLauncher";
 import "./globals.css";
 
 const inter = Inter({
@@ -29,7 +29,7 @@ export default function RootLayout({
           src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"
           strategy="afterInteractive"
         />
-        <ZapierChatbot />
+        <ChatbotLauncher />
       </body>
     </html>
   );
