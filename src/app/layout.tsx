@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -19,10 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} antialiased`}
-      >
+      <body className={`${inter.variable} antialiased`}>
         {children}
+        <Script
+          async
+          type="module"
+          src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"
+          strategy="afterInteractive"
+        />
+        <zapier-interfaces-chatbot-embed is-popup="true" chatbot-id="cmk1o0m4b007ovdbbmvcqc0f9"></zapier-interfaces-chatbot-embed>
       </body>
     </html>
   );
